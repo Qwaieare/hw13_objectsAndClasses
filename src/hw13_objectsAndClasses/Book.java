@@ -6,7 +6,6 @@ public class Book {
     private final Author authorName; // имя автора
     private final String bookTitle; // название книги
     private int publisherYear; // год публикации
-    String bookName;
 
     // Конструктор класса с 3 параметрами
     // Для обозначения переменных, объявленных для всего класса, используется this
