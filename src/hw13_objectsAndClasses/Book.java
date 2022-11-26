@@ -1,5 +1,7 @@
 package hw13_objectsAndClasses;
 
+import java.util.Objects;
+
 public class Book {
     // Поля класса. Ограничение уровня доступа с помощью модификатора privat.
     // Обращение к полям через геттеры и сеттеры.
@@ -37,5 +39,25 @@ public class Book {
            return;
         }
         this.publisherYear = publisherYear;
+    }
+    @Override
+    public  boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || obj.getClass() != getClass()) {
+           return false;
+        }
+        Book book = (Book) obj;
+        return authorName.equals(book.authorName) &&
+                bookTitle.equals(book.bookTitle);
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(authorName, bookTitle);
+    }
+    @Override
+    public String toString() {
+        return authorName + ":" + bookTitle + ":" + publisherYear;
     }
 }

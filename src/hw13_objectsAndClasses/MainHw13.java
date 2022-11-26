@@ -16,5 +16,9 @@ public class MainHw13 {
 
         System.out.println(secondAuthor.getFirstName() + " " + secondAuthor.getFamilyName () + " '" + secondBook.getBookTitle() + ", " + secondBook.getPublisherYear());
 
+        System.out.println(firstAuthor);
+        System.out.println(firstBook);
+        System.out.println(secondAuthor);
+        System.out.println(secondBook);
     }
 }
